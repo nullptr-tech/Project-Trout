@@ -1,4 +1,4 @@
-package trout.project.ptr.anull.project_trout;
+package ptr.anull.project_trout;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("trout.project.ptr.anull.project_trout", appContext.getPackageName());
+        assertEquals("ptr.anull.project_trout", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package trout.project.ptr.anull.project_trout;
+package ptr.anull.project_trout;
 
 import org.junit.Test;
 
