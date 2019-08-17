@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#a61b09</color>
-    <color name="colorPrimaryDark">#a61b09</color>
+    <color name="colorPrimary">#B2022F</color>
+    <color name="colorPrimaryDark">#B2022F</color>
     <color name="colorAccent">#f2fe71</color>
 
     <color name="bg_login">#26ae90</color>
@@ -17,4 +17,13 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
+
+    <!-- Button colours -->
+    <color name="button_gradient_start">#FFEBF0</color>
+    <color name="button_gradient_end">#FF4F7B</color>
+    <color name="button_outline">#FF94AF</color>
+    <!-- Button colours end-->
+
+    <color name="background_gradient_start">#fff</color>
+    <color name="background_gradient_end">#B2022F</color>
 </resources>
