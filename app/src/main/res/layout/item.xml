@@ -12,7 +12,7 @@
     android:outlineProvider="bounds"
     android:clipToPadding="false"
     >
-
+<!-- Comment so i can push to master -->
 <android.cardview.widget.CardView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
