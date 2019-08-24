@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">208361485088-cp22b1b5bal047lavinv28fkbp2cur0j.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://project-trout-6563a.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">208361485088</string>
+    <string name="google_api_key" translatable="false">AIzaSyA28AbheCUWG5lzlC0F_W75wB0qLzu49_o</string>
+    <string name="google_app_id" translatable="false">1:208361485088:android:1b0dd365c8fcb9d0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA28AbheCUWG5lzlC0F_W75wB0qLzu49_o</string>
+    <string name="google_storage_bucket" translatable="false">project-trout-6563a.appspot.com</string>
+    <string name="project_id" translatable="false">project-trout-6563a</string>
+</resources>

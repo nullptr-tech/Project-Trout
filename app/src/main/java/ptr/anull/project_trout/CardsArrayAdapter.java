@@ -17,7 +17,7 @@ public class CardsArrayAdapter extends ArrayAdapter<Cards> {
         super(context, resourceId, items);
     }
 
-    @SuppressLint("ViewHolder")
+   /* @SuppressLint("ViewHolder")
     public View getView(int position, View convertView, ViewGroup parent){
         Cards cardItem = getItem(position);
         if (convertView==null) {
@@ -28,5 +28,5 @@ public class CardsArrayAdapter extends ArrayAdapter<Cards> {
         name.setText(cardItem.getName()); // name
         image.setImageResource(R.mipmap.ic_launcher); // image
         return convertView;
-    }
+    }*/
 }

@@ -1,0 +1,4 @@
+#Sat Aug 24 12:23:14 BST 2019
+base.0=C\:\\Users\\Sami\\Documents\\GitHub\\Project-Trout\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+path.0=classes.dex
+renamed.0=classes.dex
