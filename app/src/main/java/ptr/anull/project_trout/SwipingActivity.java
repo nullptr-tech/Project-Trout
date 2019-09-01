@@ -1,13 +1,18 @@
 package ptr.anull.project_trout;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 
 import java.util.ArrayList;
@@ -18,6 +23,9 @@ public class SwipingActivity extends AppCompatActivity {
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
     private int i;
+    private FirebaseAuth.AuthStateListener authListener;
+    private FirebaseAuth auth;
+    private Button signOut;
 
 
 
@@ -26,6 +34,28 @@ public class SwipingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swiping);
 
+        //get firebase auth instance
+        auth = FirebaseAuth.getInstance();
+
+        //get current user
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+
+
+        authListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user == null) {
+                    // user auth state is changed - user is null
+                    // launch login activity
+                    startActivity(new Intent(SwipingActivity.this, LoginActivity.class));
+                    finish();
+                }
+            }
+        };
+
+        signOut = (Button) findViewById(R.id.sign_out);
 
         al = new ArrayList<>();
         al.add("Temporary");
@@ -37,7 +67,14 @@ public class SwipingActivity extends AppCompatActivity {
         al.add(":)");
 
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("","SIGN OUT");
+                signOut();
 
+            }
+        });
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
         flingContainer.setAdapter(arrayAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
@@ -85,6 +122,11 @@ public class SwipingActivity extends AppCompatActivity {
             }
         });
 
+    }
+    //sign out method
+    public void signOut() {
+        auth.signOut();
+        startActivity(new Intent(SwipingActivity.this, WelcomeActivity.class));
     }
 }
     /*private Cards cardsData[];
